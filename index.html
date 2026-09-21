@@ -1,0 +1,2475 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anusha | UI/UX Designer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    },
+
+                    colors: {
+                        cream: '#F7F5F0',
+                        dark: '#101010',
+                        accent: '#E86A33'
+                    }
+
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #F7F5F0;
+        }
+
+        .fade {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all .8s ease;
+        }
+
+        .fade.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card {
+            transition: transform .4s ease, box-shadow .4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,.15);
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu.show {
+            display: flex;
+        }
+
+    </style>
+
+</head>
+
+
+<body class="font-sans text-[#101010]">
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="fixed top-0 left-0 w-full z-50
+               bg-[#F7F5F0]/90 backdrop-blur-lg
+               border-b border-black/5">
+
+    <nav class="max-w-7xl mx-auto px-6 lg:px-10
+                h-20 flex items-center justify-between">
+
+        <a href="#home"
+           class="text-2xl font-bold tracking-tight">
+
+            ANUSHA<span class="text-accent">.</span>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+            <a href="#home"
+               class="hover:text-accent transition">
+                Home
+            </a>
+
+            <a href="#work"
+               class="hover:text-accent transition">
+                Work
+            </a>
+
+            <a href="#about"
+               class="hover:text-accent transition">
+                About
+            </a>
+
+            <a href="#process"
+               class="hover:text-accent transition">
+                Process
+            </a>
+
+            <a href="#skills"
+               class="hover:text-accent transition">
+                Skills
+            </a>
+
+            <a href="#contact"
+               class="bg-dark text-white
+                      px-5 py-3 rounded-full
+                      hover:bg-accent transition">
+
+                Contact
+
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Button -->
+
+        <button id="menuButton"
+                class="md:hidden text-2xl">
+
+            ☰
+
+        </button>
+
+    </nav>
+
+
+    <!-- Mobile Navigation -->
+
+    <div id="mobileMenu"
+         class="mobile-menu
+                flex-col gap-5
+                bg-[#F7F5F0]
+                px-6 py-6
+                md:hidden">
+
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section id="home"
+         class="min-h-screen
+                pt-32 px-6 lg:px-10">
+
+    <div class="max-w-7xl mx-auto
+                min-h-[85vh]
+                flex items-center">
+
+        <div class="grid lg:grid-cols-2
+                    gap-16 items-center w-full">
+
+
+            <!-- Hero Text -->
+
+            <div class="fade">
+
+                <p class="text-accent
+                          uppercase
+                          tracking-[5px]
+                          text-sm
+                          font-semibold
+                          mb-6">
+
+                    UI / UX DESIGNER
+
+                </p>
+
+
+                <h1 class="font-display
+                           text-6xl md:text-7xl lg:text-8xl
+                           leading-[.95]
+                           mb-8">
+
+                    Designing
+                    <span class="italic">
+                        experiences
+                    </span>
+                    people love.
+
+                </h1>
+
+
+                <p class="text-lg
+                          text-black/60
+                          max-w-xl
+                          leading-relaxed
+                          mb-10">
+
+                    Hi, I'm Anusha. I create intuitive,
+                    accessible and visually engaging
+                    digital experiences for mobile,
+                    web and TV.
+
+                </p>
+
+
+                <div class="flex flex-wrap gap-4">
+
+                    <a href="#work"
+                       class="bg-dark
+                              text-white
+                              px-7 py-4
+                              rounded-full
+                              font-semibold
+                              hover:bg-accent
+                              transition">
+
+                        View My Work →
+
+                    </a>
+
+
+                    <a href="#contact"
+                       class="border border-black/20
+                              px-7 py-4
+                              rounded-full
+                              font-semibold
+                              hover:bg-dark
+                              hover:text-white
+                              transition">
+
+                        Let's Talk
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+
+            <div class="fade">
+
+                <div class="relative">
+
+                    <div class="absolute
+                                -top-10
+                                -right-5
+                                w-40 h-40
+                                bg-accent/20
+                                rounded-full
+                                blur-3xl">
+                    </div>
+
+
+                    <div class="relative
+                                bg-dark
+                                rounded-[40px]
+                                p-6
+                                overflow-hidden">
+
+                        <p class="text-white/40
+                                  text-xs
+                                  tracking-[4px]
+                                  mb-6">
+
+                            SELECTED WORK
+
+                        </p>
+
+
+                        <div class="grid grid-cols-2 gap-4">
+
+
+                            <!-- TV -->
+
+                            <div class="bg-[#242424]
+                                        rounded-3xl
+                                        p-4">
+
+                                <div class="aspect-[4/3]
+                                            bg-gradient-to-br
+                                            from-[#8b3f2e]
+                                            to-[#111]
+                                            rounded-2xl
+                                            flex items-end
+                                            p-4">
+
+                                    <div>
+
+                                        <p class="text-white/50
+                                                  text-[9px]">
+
+                                            TV UI
+
+                                        </p>
+
+                                        <p class="text-white
+                                                  font-bold">
+
+                                            Movie
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Mobile -->
+
+                            <div class="bg-[#242424]
+                                        rounded-3xl
+                                        p-4">
+
+                                <div class="aspect-[4/3]
+                                            bg-gradient-to-br
+                                            from-[#52788b]
+                                            to-[#111]
+                                            rounded-2xl
+                                            flex items-end
+                                            p-4">
+
+                                    <div>
+
+                                        <p class="text-white/50
+                                                  text-[9px]">
+
+                                            MOBILE UI
+
+                                        </p>
+
+                                        <p class="text-white
+                                                  font-bold">
+
+                                            Elderly Care
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <h2 class="text-white
+                                   text-4xl
+                                   md:text-5xl
+                                   font-bold
+                                   mt-8">
+
+                            UI/UX Designer
+
+                        </h2>
+
+
+                        <p class="text-white/40 mt-3">
+
+                            Mobile • TV • Web
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="py-24
+                px-6 lg:px-10
+                bg-white">
+
+    <div class="max-w-5xl
+                mx-auto
+                text-center
+                fade">
+
+        <p class="text-accent
+                  uppercase
+                  tracking-[4px]
+                  text-sm
+                  font-semibold
+                  mb-6">
+
+            My Design Focus
+
+        </p>
+
+
+        <h2 class="font-display
+                   text-4xl
+                   md:text-6xl
+                   leading-tight">
+
+            Creating simple experiences
+            for complex problems.
+
+        </h2>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WORK
+===================================================== -->
+
+<section id="work"
+         class="py-32
+                px-6 lg:px-10
+                bg-dark
+                text-white">
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <div class="mb-20 fade">
+
+            <p class="text-accent
+                      uppercase
+                      tracking-[4px]
+                      text-sm
+                      font-semibold
+                      mb-5">
+
+                Selected Work
+
+            </p>
+
+
+            <h2 class="font-display
+                       text-5xl md:text-6xl">
+
+                Featured Projects
+
+            </h2>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROJECT 1
+        ================================================== -->
+
+        <article class="project-card
+                        bg-[#1F1F1F]
+                        rounded-[35px]
+                        overflow-hidden
+                        mb-10
+                        fade">
+
+            <div class="grid lg:grid-cols-2">
+
+
+                <!-- Project Image -->
+
+                <div class="min-h-[550px]
+                            bg-gradient-to-br
+                            from-[#4d241e]
+                            via-[#191919]
+                            to-black
+                            flex items-center
+                            justify-center
+                            p-10">
+
+
+                    <!-- TV Mockup -->
+
+                    <div class="w-full max-w-xl">
+
+                        <div class="bg-[#080808]
+                                    p-4
+                                    rounded-xl
+                                    shadow-2xl">
+
+                            <div class="aspect-video
+                                        bg-gradient-to-br
+                                        from-[#542c28]
+                                        via-[#181818]
+                                        to-black
+                                        rounded-lg
+                                        flex items-end
+                                        p-8">
+
+                                <div>
+
+                                    <span class="text-accent
+                                                 text-xs
+                                                 uppercase
+                                                 tracking-[3px]">
+
+                                        TV EXPERIENCE
+
+                                    </span>
+
+
+                                    <h3 class="text-white
+                                               text-4xl
+                                               md:text-5xl
+                                               font-bold
+                                               mt-3">
+
+                                        Movie
+                                        Streaming
+
+                                    </h3>
+
+
+                                    <p class="text-white/50 mt-3">
+
+                                        Entertainment • TV UI
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TV stand -->
+
+                        <div class="mx-auto
+                                    w-24
+                                    h-5
+                                    bg-[#080808]">
+                        </div>
+
+                        <div class="mx-auto
+                                    w-40
+                                    h-2
+                                    bg-[#080808]
+                                    rounded-full">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Project Content -->
+
+                <div class="p-10 lg:p-16
+                            flex flex-col
+                            justify-center">
+
+
+                    <p class="text-accent
+                              uppercase
+                              tracking-[3px]
+                              text-xs
+                              font-bold">
+
+                        PROJECT 01
+
+                    </p>
+
+
+                    <h3 class="text-4xl
+                               md:text-5xl
+                               font-bold
+                               mt-5
+                               mb-6">
+
+                        Movie Streaming App
+
+                    </h3>
+
+
+                    <p class="text-white/60
+                              text-lg
+                              leading-relaxed
+                              mb-8">
+
+                        A TV-focused streaming experience designed
+                        to make discovering movies and navigating
+                        entertainment content simple and engaging
+                        on a large screen.
+
+                    </p>
+
+
+                    <div class="grid grid-cols-2
+                                gap-6 mb-10">
+
+
+                        <div>
+
+                            <p class="text-white/40 text-sm">
+                                Platform
+                            </p>
+
+                            <p class="font-semibold mt-2">
+                                Smart TV
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-white/40 text-sm">
+                                Role
+                            </p>
+
+                            <p class="font-semibold mt-2">
+                                UI/UX Designer
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-white/40 text-sm">
+                                Tool
+                            </p>
+
+                            <p class="font-semibold mt-2">
+                                Figma
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-white/40 text-sm">
+                                Project
+                            </p>
+
+                            <p class="font-semibold mt-2">
+                                Personal
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex flex-wrap gap-3 mb-10">
+
+                        <span class="px-4 py-2
+                                     bg-white/10
+                                     rounded-full
+                                     text-sm">
+
+                            UX Research
+
+                        </span>
+
+                        <span class="px-4 py-2
+                                     bg-white/10
+                                     rounded-full
+                                     text-sm">
+
+                            Wireframing
+
+                        </span>
+
+                        <span class="px-4 py-2
+                                     bg-white/10
+                                     rounded-full
+                                     text-sm">
+
+                            UI Design
+
+                        </span>
+
+                        <span class="px-4 py-2
+                                     bg-white/10
+                                     rounded-full
+                                     text-sm">
+
+                            Prototyping
+
+                        </span>
+
+                    </div>
+
+
+                    <a href="https://www.figma.com/"
+                       target="_blank"
+                       class="bg-white
+                              text-black
+                              px-7 py-4
+                              rounded-full
+                              font-semibold
+                              w-fit
+                              hover:bg-accent
+                              hover:text-white
+                              transition">
+
+                        View Figma Project ↗
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             PROJECT 2
+        ================================================== -->
+
+        <article class="project-card
+                        bg-[#1F1F1F]
+                        rounded-[35px]
+                        overflow-hidden
+                        fade">
+
+            <div class="grid lg:grid-cols-2">
+
+
+                <!-- Mobile Mockup -->
+
+                <div class="min-h-[550px]
+                            bg-gradient-to-br
+                            from-[#355b68]
+                            via-[#182226]
+                            to-black
+                            flex items-center
+                            justify-center
+                            p-10
+                            order-1 lg:order-2">
+
+
+                    <div class="relative">
+
+                        <div class="w-[250px]
+                                    md:w-[280px]
+                                    bg-[#080808]
+                                    rounded-[40px]
+                                    p-3
+                                    shadow-2xl
+                                    border border-white/10">
+
+
+                            <div class="bg-[#EEF4F5]
+                                        rounded-[32px]
+                                        overflow-hidden">
+
+
+                                <!-- Status -->
+
+                                <div class="px-5 pt-5
+                                            flex justify-between
+                                            text-xs
+                                            text-black/50">
+
+                                    <span>
+                                        9:41
+                                    </span>
+
+                                    <span>
+                                        ● ● ●
+                                    </span>
+
+                                </div>
+
+
+                                <!-- App content -->
+
+                                <div class="p-5">
+
+                                    <p class="text-black/40
+                                              text-xs">
+
+                                        GOOD MORNING
+
+                                    </p>
+
+
+                                    <h4 class="text-2xl
+                                               font-bold
+                                               mt-2">
+
+                                        Hello 👋
+
+                                    </h4>
+
+
+                                    <div class="bg-white
+                                                rounded-2xl
+                                                p-4
+                                                mt-6
+                                                shadow-sm">
+
+                                        <p class="text-xs
+                                                  text-black/40">
+
+                                            NEXT MEDICINE
+
+                                        </p>
+
+                                        <p class="font-bold mt-2">
+
+                                            Morning Medicine
+
+                                        </p>
+
+                                        <p class="text-sm
+                                                  text-accent
+                                                  mt-2">
+
+                                            08:00 AM
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="grid grid-cols-2
+                                                gap-3
+                                                mt-4">
+
+                                        <div class="bg-white
+                                                    rounded-xl
+                                                    p-4">
+
+                                            <span class="text-xl">
+                                                💊
+                                            </span>
+
+                                            <p class="text-xs
+                                                      font-semibold
+                                                      mt-3">
+
+                                                Medicines
+
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="bg-white
+                                                    rounded-xl
+                                                    p-4">
+
+                                            <span class="text-xl">
+                                                📅
+                                            </span>
+
+                                            <p class="text-xs
+                                                      font-semibold
+                                                      mt-3">
+
+                                                Appointments
+
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Content -->
+
+                <div class="p-10 lg:p-16
+                            flex flex-col
+                            justify-center
+                            order-2 lg:order-1">
+
+
+                    <p class="text-accent
+                              uppercase
+                              tracking-[3px]
+                              text-xs
+                              font-bold">
+
+                        PROJECT 02
+
+                    </p>
+
+
+                    <h3 class="text-4xl
+                               md:text-5xl
+                               font-bold
+                               mt-5
+                               mb-6">
+
+                        Smart Elderly Care
+
+                    </h3>
+
+
+                    <p class="text-white/60
+                              text-lg
+                              leading-relaxed
+                              mb-8">
+
+                        A mobile healthcare experience designed
+                        to help elderly users manage medicines,
+                        appointments, health information and
+                        daily activities through a simple,
+                        accessible interface.
+
+                    </p>
+
+
+                    <div class="grid grid-cols-2
+                                gap-6 mb-10">
+
+
+                        <div>
+
+                            <p class="text-white/40 text-sm">
+                                Platform
+                            </p>
+
+                            <p class="font-semibold mt-2">
+                                Mobile App
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-white/40 text-sm">
+                                Role
+                            </p>
+
+                            <p class="font-semibold mt-2">
+                                UI/UX Designer
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-white/40 text-sm">
+                                Tool
+                            </p>
+
+                            <p class="font-semibold mt-2">
+                                Figma
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-white/40 text-sm">
+                                Project
+                            </p>
+
+                            <p class="font-semibold mt-2">
+                                Personal
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex flex-wrap gap-3 mb-10">
+
+                        <span class="px-4 py-2
+                                     bg-white/10
+                                     rounded-full
+                                     text-sm">
+
+                            User Research
+
+                        </span>
+
+                        <span class="px-4 py-2
+                                     bg-white/10
+                                     rounded-full
+                                     text-sm">
+
+                            User Flow
+
+                        </span>
+
+                        <span class="px-4 py-2
+                                     bg-white/10
+                                     rounded-full
+                                     text-sm">
+
+                            Accessibility
+
+                        </span>
+
+                        <span class="px-4 py-2
+                                     bg-white/10
+                                     rounded-full
+                                     text-sm">
+
+                            UI Design
+
+                        </span>
+
+                    </div>
+
+
+                    <a href="#elderly-case-study"
+                       class="bg-white
+                              text-black
+                              px-7 py-4
+                              rounded-full
+                              font-semibold
+                              w-fit
+                              hover:bg-accent
+                              hover:text-white
+                              transition">
+
+                        View Case Study ↓
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MOVIE CASE STUDY
+===================================================== -->
+
+<section class="py-32
+                px-6 lg:px-10
+                bg-[#EEEAE3]">
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <div class="max-w-3xl mb-20 fade">
+
+            <p class="text-accent
+                      uppercase
+                      tracking-[4px]
+                      text-sm
+                      font-semibold">
+
+                Case Study 01
+
+            </p>
+
+
+            <h2 class="font-display
+                       text-5xl md:text-6xl
+                       mt-5">
+
+                Movie Streaming App
+
+            </h2>
+
+
+            <p class="text-black/60
+                      text-lg
+                      mt-6
+                      leading-relaxed">
+
+                Designing a comfortable and intuitive entertainment
+                experience for large-screen TV users.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- UX Problems -->
+
+        <div class="grid md:grid-cols-3
+                    gap-6 mb-16">
+
+
+            <div class="bg-white
+                        p-8
+                        rounded-3xl
+                        fade">
+
+                <span class="text-accent font-bold">
+                    01
+                </span>
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6
+                           mb-3">
+
+                    Discovery
+
+                </h3>
+
+                <p class="text-black/50">
+
+                    Help users discover movies quickly
+                    without complicated navigation.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-white
+                        p-8
+                        rounded-3xl
+                        fade">
+
+                <span class="text-accent font-bold">
+                    02
+                </span>
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6
+                           mb-3">
+
+                    Navigation
+
+                </h3>
+
+                <p class="text-black/50">
+
+                    Create a clear navigation system
+                    suitable for remote-based interaction.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-white
+                        p-8
+                        rounded-3xl
+                        fade">
+
+                <span class="text-accent font-bold">
+                    03
+                </span>
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6
+                           mb-3">
+
+                    Visual Experience
+
+                </h3>
+
+                <p class="text-black/50">
+
+                    Create an immersive cinematic interface
+                    for large screens.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- User Flow -->
+
+        <div class="bg-dark
+                    text-white
+                    rounded-[35px]
+                    p-10 md:p-16
+                    fade">
+
+            <p class="text-accent
+                      uppercase
+                      tracking-[4px]
+                      text-sm">
+
+                User Flow
+
+            </p>
+
+
+            <div class="flex flex-wrap
+                        items-center
+                        gap-4
+                        mt-10">
+
+                <span class="bg-white/10
+                             px-5 py-3
+                             rounded-full">
+
+                    Home
+
+                </span>
+
+                <span>→</span>
+
+                <span class="bg-white/10
+                             px-5 py-3
+                             rounded-full">
+
+                    Browse
+
+                </span>
+
+                <span>→</span>
+
+                <span class="bg-white/10
+                             px-5 py-3
+                             rounded-full">
+
+                    Search
+
+                </span>
+
+                <span>→</span>
+
+                <span class="bg-white/10
+                             px-5 py-3
+                             rounded-full">
+
+                    Movie Details
+
+                </span>
+
+                <span>→</span>
+
+                <span class="bg-white/10
+                             px-5 py-3
+                             rounded-full">
+
+                    Watch
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ELDERLY CASE STUDY
+===================================================== -->
+
+<section id="elderly-case-study"
+         class="py-32
+                px-6 lg:px-10
+                bg-white">
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <div class="max-w-3xl mb-20 fade">
+
+            <p class="text-accent
+                      uppercase
+                      tracking-[4px]
+                      text-sm
+                      font-semibold">
+
+                Case Study 02
+
+            </p>
+
+
+            <h2 class="font-display
+                       text-5xl md:text-6xl
+                       mt-5">
+
+                Smart Elderly Care
+
+            </h2>
+
+
+            <p class="text-black/60
+                      text-lg
+                      mt-6
+                      leading-relaxed">
+
+                Designing an accessible mobile experience
+                that makes everyday healthcare management
+                easier for elderly users.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- Design Goals -->
+
+        <div class="grid md:grid-cols-3
+                    gap-6 mb-16">
+
+
+            <div class="bg-[#F7F5F0]
+                        p-8
+                        rounded-3xl
+                        fade">
+
+                <span class="text-accent font-bold">
+                    01
+                </span>
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6
+                           mb-3">
+
+                    Simplicity
+
+                </h3>
+
+                <p class="text-black/50">
+
+                    Reduce complexity and create
+                    straightforward interactions.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-[#F7F5F0]
+                        p-8
+                        rounded-3xl
+                        fade">
+
+                <span class="text-accent font-bold">
+                    02
+                </span>
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6
+                           mb-3">
+
+                    Accessibility
+
+                </h3>
+
+                <p class="text-black/50">
+
+                    Use readable typography, clear
+                    actions and comfortable spacing.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-[#F7F5F0]
+                        p-8
+                        rounded-3xl
+                        fade">
+
+                <span class="text-accent font-bold">
+                    03
+                </span>
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6
+                           mb-3">
+
+                    Health Management
+
+                </h3>
+
+                <p class="text-black/50">
+
+                    Bring medicines, appointments and
+                    health information into one experience.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Features -->
+
+        <div class="grid lg:grid-cols-2
+                    gap-8">
+
+
+            <div class="bg-[#F7F5F0]
+                        rounded-[35px]
+                        p-10
+                        fade">
+
+                <p class="text-accent
+                          uppercase
+                          tracking-[3px]
+                          text-xs
+                          font-bold">
+
+                    Core Features
+
+                </p>
+
+
+                <div class="grid grid-cols-2
+                            gap-4
+                            mt-8">
+
+                    <div class="bg-white
+                                p-5
+                                rounded-2xl">
+
+                        💊
+                        <p class="font-semibold mt-3">
+                            Medicine Reminder
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white
+                                p-5
+                                rounded-2xl">
+
+                        📅
+                        <p class="font-semibold mt-3">
+                            Appointments
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white
+                                p-5
+                                rounded-2xl">
+
+                        ❤️
+                        <p class="font-semibold mt-3">
+                            Health Records
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white
+                                p-5
+                                rounded-2xl">
+
+                        🔔
+                        <p class="font-semibold mt-3">
+                            Notifications
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="bg-dark
+                        text-white
+                        rounded-[35px]
+                        p-10
+                        fade">
+
+                <p class="text-accent
+                          uppercase
+                          tracking-[3px]
+                          text-xs
+                          font-bold">
+
+                    User Flow
+
+                </p>
+
+
+                <div class="flex flex-wrap
+                            gap-3
+                            mt-8">
+
+                    <span class="bg-white/10
+                                 px-4 py-3
+                                 rounded-full">
+
+                        Login
+
+                    </span>
+
+                    <span>→</span>
+
+                    <span class="bg-white/10
+                                 px-4 py-3
+                                 rounded-full">
+
+                        Dashboard
+
+                    </span>
+
+                    <span>→</span>
+
+                    <span class="bg-white/10
+                                 px-4 py-3
+                                 rounded-full">
+
+                        Medicines
+
+                    </span>
+
+                    <span>→</span>
+
+                    <span class="bg-white/10
+                                 px-4 py-3
+                                 rounded-full">
+
+                        Appointments
+
+                    </span>
+
+                    <span>→</span>
+
+                    <span class="bg-white/10
+                                 px-4 py-3
+                                 rounded-full">
+
+                        Health
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DESIGN PROCESS
+===================================================== -->
+
+<section id="process"
+         class="py-32
+                px-6 lg:px-10">
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <div class="text-center
+                    max-w-2xl
+                    mx-auto
+                    mb-20
+                    fade">
+
+            <p class="text-accent
+                      uppercase
+                      tracking-[4px]
+                      text-sm
+                      font-semibold">
+
+                My Process
+
+            </p>
+
+
+            <h2 class="font-display
+                       text-5xl
+                       mt-5">
+
+                From idea to experience.
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="grid grid-cols-2
+                    lg:grid-cols-4
+                    gap-5">
+
+
+            <div class="bg-white
+                        rounded-3xl
+                        p-7
+                        fade">
+
+                <span class="text-accent
+                             font-bold
+                             text-lg">
+
+                    01
+
+                </span>
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-8">
+
+                    Research
+
+                </h3>
+
+                <p class="text-black/50 mt-3">
+
+                    Understand users,
+                    needs and problems.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-white
+                        rounded-3xl
+                        p-7
+                        fade">
+
+                <span class="text-accent
+                             font-bold
+                             text-lg">
+
+                    02
+
+                </span>
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-8">
+
+                    Define
+
+                </h3>
+
+                <p class="text-black/50 mt-3">
+
+                    Identify the problem
+                    and define goals.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-white
+                        rounded-3xl
+                        p-7
+                        fade">
+
+                <span class="text-accent
+                             font-bold
+                             text-lg">
+
+                    03
+
+                </span>
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-8">
+
+                    Ideate
+
+                </h3>
+
+                <p class="text-black/50 mt-3">
+
+                    Explore solutions,
+                    flows and concepts.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-white
+                        rounded-3xl
+                        p-7
+                        fade">
+
+                <span class="text-accent
+                             font-bold
+                             text-lg">
+
+                    04
+
+                </span>
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-8">
+
+                    Wireframe
+
+                </h3>
+
+                <p class="text-black/50 mt-3">
+
+                    Build the structure
+                    before visual design.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-white
+                        rounded-3xl
+                        p-7
+                        fade">
+
+                <span class="text-accent
+                             font-bold
+                             text-lg">
+
+                    05
+
+                </span>
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-8">
+
+                    UI Design
+
+                </h3>
+
+                <p class="text-black/50 mt-3">
+
+                    Create polished,
+                    consistent interfaces.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-white
+                        rounded-3xl
+                        p-7
+                        fade">
+
+                <span class="text-accent
+                             font-bold
+                             text-lg">
+
+                    06
+
+                </span>
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-8">
+
+                    Prototype
+
+                </h3>
+
+                <p class="text-black/50 mt-3">
+
+                    Connect screens and
+                    interactions.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-white
+                        rounded-3xl
+                        p-7
+                        fade">
+
+                <span class="text-accent
+                             font-bold
+                             text-lg">
+
+                    07
+
+                </span>
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-8">
+
+                    Test
+
+                </h3>
+
+                <p class="text-black/50 mt-3">
+
+                    Validate the experience
+                    with users.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-dark
+                        text-white
+                        rounded-3xl
+                        p-7
+                        fade">
+
+                <span class="text-accent
+                             font-bold
+                             text-lg">
+
+                    08
+
+                </span>
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-8">
+
+                    Improve
+
+                </h3>
+
+                <p class="text-white/50 mt-3">
+
+                    Iterate based on
+                    feedback and insights.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills"
+         class="py-32
+                px-6 lg:px-10
+                bg-white">
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <div class="grid lg:grid-cols-2
+                    gap-20">
+
+
+            <div class="fade">
+
+                <p class="text-accent
+                          uppercase
+                          tracking-[4px]
+                          text-sm
+                          font-semibold">
+
+                    Skills
+
+                </p>
+
+
+                <h2 class="font-display
+                           text-5xl md:text-6xl
+                           mt-5">
+
+                    What I bring to
+                    the table.
+
+                </h2>
+
+            </div>
+
+
+            <div class="grid sm:grid-cols-2
+                        gap-4
+                        fade">
+
+
+                <div class="border
+                            border-black/10
+                            rounded-2xl
+                            p-6">
+
+                    <h3 class="font-bold">
+                        UX Design
+                    </h3>
+
+                    <p class="text-black/50 mt-4">
+                        User Research<br>
+                        User Personas<br>
+                        User Flows<br>
+                        Information Architecture
+                    </p>
+
+                </div>
+
+
+                <div class="border
+                            border-black/10
+                            rounded-2xl
+                            p-6">
+
+                    <h3 class="font-bold">
+                        UI Design
+                    </h3>
+
+                    <p class="text-black/50 mt-4">
+                        Visual Design<br>
+                        Typography<br>
+                        Color Theory<br>
+                        Design Systems
+                    </p>
+
+                </div>
+
+
+                <div class="border
+                            border-black/10
+                            rounded-2xl
+                            p-6">
+
+                    <h3 class="font-bold">
+                        Interaction
+                    </h3>
+
+                    <p class="text-black/50 mt-4">
+                        Prototyping<br>
+                        Micro-interactions<br>
+                        Usability Testing<br>
+                        Responsive Design
+                    </p>
+
+                </div>
+
+
+                <div class="border
+                            border-black/10
+                            rounded-2xl
+                            p-6">
+
+                    <h3 class="font-bold">
+                        Tools
+                    </h3>
+
+                    <p class="text-black/50 mt-4">
+                        Figma<br>
+                        FigJam<br>
+                        Photoshop<br>
+                        Illustrator
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about"
+         class="py-32
+                px-6 lg:px-10">
+
+    <div class="max-w-5xl
+                mx-auto
+                text-center
+                fade">
+
+
+        <p class="text-accent
+                  uppercase
+                  tracking-[4px]
+                  text-sm
+                  font-semibold">
+
+            About Me
+
+        </p>
+
+
+        <h2 class="font-display
+                   text-5xl md:text-7xl
+                   mt-6
+                   leading-tight">
+
+            I believe great design
+            should feel
+            <span class="italic">
+                effortless.
+            </span>
+
+        </h2>
+
+
+        <p class="text-black/60
+                  text-lg
+                  leading-relaxed
+                  max-w-3xl
+                  mx-auto
+                  mt-8">
+
+            I enjoy transforming ideas and user problems
+            into simple, thoughtful and engaging digital
+            experiences. My approach combines user-centered
+            thinking with visual design to create interfaces
+            that are useful, accessible and enjoyable.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact"
+         class="py-32
+                px-6 lg:px-10
+                bg-dark
+                text-white">
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <div class="grid lg:grid-cols-2
+                    gap-20">
+
+
+            <div class="fade">
+
+                <p class="text-accent
+                          uppercase
+                          tracking-[4px]
+                          text-sm
+                          font-semibold">
+
+                    Contact
+
+                </p>
+
+
+                <h2 class="font-display
+                           text-6xl md:text-7xl
+                           mt-6
+                           leading-tight">
+
+                    Let's create
+                    something
+                    <span class="italic">
+                        meaningful.
+                    </span>
+
+                </h2>
+
+
+                <p class="text-white/50
+                          text-lg
+                          mt-8
+                          max-w-lg">
+
+                    Have a project, opportunity or
+                    idea? I'd love to hear from you.
+
+                </p>
+
+
+                <div class="mt-10 space-y-4">
+
+                    <a href="mailto:anuganapathy88@gmail.com"
+                       class="block
+                              text-white/70
+                              hover:text-accent
+                              transition">
+
+                        anuganapathy88@gmail.com
+
+                    </a>
+
+
+                    <a href="#"
+                       class="block
+                              text-white/70
+                              hover:text-accent
+                              transition">
+
+                        LinkedIn →
+
+                    </a>
+
+
+                    <a href="#"
+                       class="block
+                              text-white/70
+                              hover:text-accent
+                              transition">
+
+                        Behance →
+
+                    </a>
+
+
+                    <a href="#"
+                       class="block
+                              text-white/70
+                              hover:text-accent
+                              transition">
+
+                        Dribbble →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Contact Form -->
+
+            <form id="contactForm"
+                  class="space-y-7
+                         fade">
+
+
+                <div>
+
+                    <label class="text-white/50
+                                  text-sm">
+
+                        Your Name
+
+                    </label>
+
+                    <input type="text"
+                           required
+                           placeholder="Your name"
+                           class="w-full
+                                  bg-transparent
+                                  border-b
+                                  border-white/20
+                                  py-4
+                                  outline-none
+                                  focus:border-accent">
+
+                </div>
+
+
+                <div>
+
+                    <label class="text-white/50
+                                  text-sm">
+
+                        Email
+
+                    </label>
+
+                    <input type="email"
+                           required
+                           placeholder="Your email"
+                           class="w-full
+                                  bg-transparent
+                                  border-b
+                                  border-white/20
+                                  py-4
+                                  outline-none
+                                  focus:border-accent">
+
+                </div>
+
+
+                <div>
+
+                    <label class="text-white/50
+                                  text-sm">
+
+                        Message
+
+                    </label>
+
+                    <textarea rows="5"
+                              required
+                              placeholder="Tell me about your project"
+                              class="w-full
+                                     bg-transparent
+                                     border-b
+                                     border-white/20
+                                     py-4
+                                     outline-none
+                                     focus:border-accent">
+                    </textarea>
+
+                </div>
+
+
+                <button type="submit"
+                        class="bg-white
+                               text-black
+                               px-8 py-4
+                               rounded-full
+                               font-semibold
+                               hover:bg-accent
+                               hover:text-white
+                               transition">
+
+                    Send Message →
+
+                </button>
+
+
+                <p id="successMessage"
+                   class="hidden text-accent">
+
+                    Thank you! I'll get back to you soon.
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="bg-dark
+               border-t
+               border-white/10
+               text-white
+               px-6 lg:px-10">
+
+    <div class="max-w-7xl
+                mx-auto
+                py-8
+                flex flex-col
+                md:flex-row
+                justify-between
+                items-center
+                gap-5">
+
+
+        <p class="text-white/40
+                  text-sm">
+
+            © 2026 Anusha.
+            UI/UX Designer.
+
+        </p>
+
+
+        <div class="flex gap-6
+                    text-sm">
+
+            <a href="#home"
+               class="text-white/50
+                      hover:text-accent">
+
+                Back to top ↑
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+menuButton.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("show");
+
+});
+
+
+document
+    .querySelectorAll("#mobileMenu a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("show");
+
+        });
+
+    });
+
+
+
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
+
+const observer =
+    new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+document
+    .querySelectorAll(".fade")
+    .forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const successMessage =
+    document.getElementById("successMessage");
+
+
+contactForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    successMessage.classList.remove("hidden");
+
+    contactForm.reset();
+
+});
+
+</script>
+
+
+</body>
+</html>
